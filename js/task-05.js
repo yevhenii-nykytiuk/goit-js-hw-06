@@ -6,7 +6,7 @@ formNameInput.addEventListener("input", onFormInput);
 
 
 function onFormInput (event) {
-  nameOutputSpan.textContent = event.currentTarget.value;
+  nameOutputSpan.textContent = event.currentTarget.value.trim();
   if (nameOutputSpan.textContent === "") {
     nameOutputSpan.textContent = "Anonymous";
   }

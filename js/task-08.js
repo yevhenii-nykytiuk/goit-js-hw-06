@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", onSubmitLoginForm);
     alert("Поля пусті! Заповніть їх будь ласка!");
   } else {
     loginForm.reset();
-    return console.log({
+    console.log({
       email,
       password,
     })

@@ -16,10 +16,14 @@ createBtnEl.addEventListener("click", hendleCreateBtnEl);
 destroyBtnEl.addEventListener("click", hendlerRemoveEl);
 
 
-function hendleCreateBtnEl () {
-  createBoxes(numberInputEl.value);
+function hendleCreateBtnEl() {
+  if (Number(numberInputEl.value) > Number(numberInputEl.max) || Number(numberInputEl.value) < Number(numberInputEl.min)) {
+    alert("Error");
+  } else {
+    createBoxes(numberInputEl.value);
+  }
 }
- 
+
 function hendlerRemoveEl () {
   amountValueBoxes.innerHTML = "";
   numberInputEl.value = "";

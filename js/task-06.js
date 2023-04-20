@@ -7,8 +7,10 @@ formInputValidation.addEventListener("blur", onInputValidation);
 function onInputValidation() {
   if (formInputValidation.value.length === Number(sumbolLength)) {
     formInputValidation.classList.add("valid");
+    formInputValidation.classList.remove("invalid");
   } else {
     formInputValidation.classList.add("invalid");
+    formInputValidation.classList.remove("valid");
   }
 }
 

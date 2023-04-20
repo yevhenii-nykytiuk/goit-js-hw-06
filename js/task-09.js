@@ -6,12 +6,11 @@ function getRandomHexColor() {
 
 const changeRandomColors = document.querySelector(".change-color");
 const valueColor = document.querySelector(".color");
-
-
+  
+  
 changeRandomColors.addEventListener("click", hendleChangeRandomColors);
 
 function hendleChangeRandomColors() {
-  document.body.style.background = getRandomHexColor();
-  valueColor.textContent = getRandomHexColor();
+  valueColor.textContent = document.body.style.backgroundColor = getRandomHexColor();
 }
 

@@ -14,11 +14,41 @@ const images = [
 ];
 
 
+
 const galleryList = document.querySelector(".gallery");
 
-for (const {url, alt} of images) {
-  galleryList.insertAdjacentHTML("afterbegin", `<li"><img src="${url}" alt="${alt} width="200" height="200"></li>`);
-  galleryList.style.display = "flex";
-  galleryList.style.justifyContent = "center";
-  galleryList.style.gap = "20px";
-}
+
+const loadingGalleryImages = images.map(({ url, alt }) => {
+  const galleryImages = `<li"><img src="${url}" alt="${alt}" width="225" height="200"></li>`;
+  return galleryImages;
+})
+
+galleryList.insertAdjacentHTML("beforebegin", loadingGalleryImages);
+
+
+
+
+
+
+// const loadingImages = images.reduce((acc, { url, alt }) => {
+//   return acc += `<li><img srs="${url}" alt="${alt}" width="200" height="200"/></li>`;
+// }, "")
+
+// galleryList.insertAdjacentHTML("afterbegin", loadingImages);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
